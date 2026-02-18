@@ -40,7 +40,6 @@ The original application relied on a stack that included PHP and MongoDB. As a C
 
 Since this version is designed to run standalone without MongoDB or SSL (HTTPS) for local testing, use the following command to start the server:
 
-    ```bash
     [node app/server/CopyPaste.server.js https false mongoauthenticate=false]
 
 🙌 Credits & Licensing
