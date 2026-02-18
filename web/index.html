@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CopyPaste.me - Frictionless sharing between devices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div data-mimoto-id="interface" class="main-interface">
+        <div data-mimoto-id="interface-content">
+            <div class="main-interface-container">
+
+                <div data-mimoto-id="main-interface-header-background" class="main-interface-header-background"></div>
+
+                <div class="main-interface-header-content">
+
+                    <div class="logo">
+                        <a class="logo" href="/"><img data-mimoto-id="logo" src="/static/images/copypaste-logo.png" width="190" /></a>
+                    </div>
+
+                    <h1 class="tagline">Frictionless sharing<br>between devices</h1>
+                    <h2 class="description">Private end-to-end encryption, secure transfer and your data won't be stored in the cloud</h2>
+
+                <div class="component_AlertMessage_container">
+                    <div data-mimoto-id="component_AlertMessage" class="component_AlertMessage">
+                        <div class="component_AlertMessage_content">
+                            <div data-mimoto-id="label" class="component_AlertMessage_label"></div>
+                            <div data-mimoto-id="menu" class="component_AlertMessage_menu">
+                                <div data-mimoto-id="button" class="component_AlertMessage_button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-mimoto-id="warning_security_compromised" class="warning_security_compromised"></div>
+
+                <div data-mimoto-id="component_Client" class="component_Client">
+                    <div data-mimoto-id="component_Connector" class="component_Connector">
+                        <div class="component_Connector_inner">
+                            <div data-mimoto-id="card_front" class="component_Connector_card component_Connector_card_front"></div>
+                            <div data-mimoto-id="card_back" class="component_Connector_card component_Connector_card_back"></div>
+                            <div data-mimoto-id="connectiontypes-container" class="component_Connector_connectiontypes_container">
+                                <div data-mimoto-id="type_scan">
+                                    <div class="component_Connector_card_label">Scan me</div>
+                                    <div class="component_Connector_card_sublabel">to connect your phone</div>
+                                    <div data-mimoto-id="container" class="component_Connector_container"></div>
+                                </div>
+                                <div data-mimoto-id="type_manually">
+                                    <div class="component_Connector_card_label">Use this URL</div>
+                                    <div class="component_Connector_card_sublabel">on the other device</div>
+                                    <div data-mimoto-id="instructions" class="component_Connector_instructions">
+                                        <div>
+                                            <div class="component_Connector_instructions_url"><a href="/connect" target="_blank"><span data-mimoto-id="connect_url">http://localhost:3000</span>/connect</a></div>
+                                            <div class="component_Connector_instructions_guidance">and enter<br>the following code:</div>
+                                            <div data-mimoto-id="code" class="component_Connector_instructions_code"></div>
+                                            <div data-mimoto-id="countdown" class="component_Connector_instructions_validity"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-mimoto-id="type_invite">
+                                    <div data-mimoto-id="component_Connector_front_label" class="component_Connector_card_label">Send invite</div>
+                                    <div data-mimoto-id="component_Connector_front_sublabel" class="component_Connector_card_sublabel">
+                                        valid for <span data-mimoto-id="timetillexpiration" class="component_Connector_card_sublabel_invite_expirationlabel">x min</span> - <a data-mimoto-id="button-refreshtoken" class="">refresh</a>
+                                    </div>
+                                    <div data-mimoto-id="inviteoptions" class="component_Connector_sendinvite_container">
+                                        <div class="component_Connector_sendinvite_channels">
+                                            <div class="component_Connector_sendinvite_channel_row">
+                                                <div data-mimoto-id="button-whatsapp" class="component_Connector_sendinvite_channel" data-sharer="whatsapp" data-title="Let's exchange data privately and securely" data-url="https://copypaste.me">
+                                                    <div class="component_Connector_sendinvite_channel_name">
+                                                        <div class="component_Connector_sendinvite_channel_name_label">Whatsapp</div>
+                                                    </div>
+                                                    <div class="component_Connector_sendinvite_channel_icon whatsapp"></div>
+                                                </div>
+                                                <div data-mimoto-id="button-telegram" class="component_Connector_sendinvite_channel" data-sharer="telegram" data-title="Let's exchange data privately and securely" data-url="https://copypaste.me">
+                                                    <div class="component_Connector_sendinvite_channel_name">
+                                                        <div class="component_Connector_sendinvite_channel_name_label">Telegram</div>
+                                                    </div>
+                                                    <div class="component_Connector_sendinvite_channel_icon telegram"></div>
+                                                </div>
+                                            </div>
+                                            <div class="component_Connector_sendinvite_channel_row">
+                                                <div data-mimoto-id="button-email" class="component_Connector_sendinvite_channel" data-sharer="email" data-title="Let's exchange data privately and securely" data-url="https://copypaste.me" data-subject="Let's exchange data securely" data-to="">
+                                                    <div class="component_Connector_sendinvite_channel_name">
+                                                        <div class="component_Connector_sendinvite_channel_name_label">Email</div>
+                                                    </div>
+                                                    <div class="component_Connector_sendinvite_channel_icon email"></div>
+                                                </div>
+                                                <div data-mimoto-id="button-copylink" class="component_Connector_sendinvite_channel">
+                                                    <div class="component_Connector_sendinvite_channel_name">
+                                                        <div class="component_Connector_sendinvite_channel_name_label">Copy link</div>
+                                                    </div>
+                                                    <div class="component_Connector_sendinvite_channel_icon copylink"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-mimoto-id="notification-copiedtoclipboard" class="component_Connector_notification_copiedtoclipboard">
+                                    <div>Copied to clipboard!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-mimoto-id="component_MenuConnectionType" class="component_MenuConnectionType">
+                            <div data-mimoto-id="arrow" class="component_MenuConnectionType_arrowcontainer">
+                                <div class="component_MenuConnectionType_arrow">
+                                    <svg width="14px" height="10px"><polygon points="7,0 14,10 0,10" /></svg>
+                                </div>
+                            </div>
+                            <div data-mimoto-id="button-container" class="component_MenuConnectionType_buttons">
+                                <div data-mimoto-id="button-scan" class="component_MenuConnectionType_button selected">Scan</div>
+                                <div data-mimoto-id="button-manually" class="component_MenuConnectionType_button">Manually</div>
+                                <div data-mimoto-id="button-invite" class="component_MenuConnectionType_button">Invite</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-mimoto-id="component_ManualConnectInput" class="component_ManualConnectInput">
+                        <div data-mimoto-id="title" class="component_ManualConnectInput_label">Enter your code</div>
+                        <div data-mimoto-id="subtitle" class="component_ManualConnectInput_sublabel">to manually connect</div>
+                        <div data-mimoto-id="manualcodeinput" class="component_ManualConnectInput_input">
+                            <div class="component_ManualConnectInput_code">
+                                <input data-mimoto-id="char1" type="text" class="component_ManualConnectInput_character">
+                                <input data-mimoto-id="char2" type="text" class="component_ManualConnectInput_character">
+                                <input data-mimoto-id="char3" type="text" class="component_ManualConnectInput_character">
+                                -
+                                <input data-mimoto-id="char4" type="text" class="component_ManualConnectInput_character">
+                                <input data-mimoto-id="char5" type="text" class="component_ManualConnectInput_character">
+                                <input data-mimoto-id="char6" type="text" class="component_ManualConnectInput_character">
+                            </div>
+                            <div data-mimoto-id="message" class="component_ManualConnectInput_message"></div>
+                            <div data-mimoto-id="button" class="button component_ManualConnectInput_button muted">Connect</div>
+                        </div>
+                    </div>
+
+                    <div data-mimoto-id="component_ManualConnectHandshake" class="component_ManualConnectHandshake">
+                        <div data-mimoto-id="title" class="component_ManualConnectHandshake_label">Check this code</div>
+                        <div data-mimoto-id="subtitle" class="component_ManualConnectHandshake_sublabel">it should be the same on the other device</div>
+                        <div class="component_ManualConnectHandshake_characters">
+                            <span data-mimoto-id="char1" class="component_ManualConnectHandshake_character">1</span>
+                            <span data-mimoto-id="char2" class="component_ManualConnectHandshake_character">2</span>
+                            <span data-mimoto-id="char3" class="component_ManualConnectHandshake_character">3</span>
+                            <span data-mimoto-id="char4" class="component_ManualConnectHandshake_character">4</span>
+                        </div>
+                        <div data-mimoto-id="button" class="button component_ManualConnectHandshake_button">Connect now!</div>
+                    </div>
+
+                    <div data-mimoto-id="component_DataInput" class="component_DataInput unlocked">
+                        <div class="sender_input">
+                            <div id="sender_menu" class="sender_menu">
+                                <div data-type="password" class="sender_menu_tab selected">Password</div>
+                                <div data-type="text" class="sender_menu_tab">Text</div>
+                                <div data-type="file" class="sender_menu_tab">File</div>
+                            </div>
+                            <div class="sender_data">
+                                <div class="sender_data_label">
+                                    <div data-mimoto-id="sender_data_label_data" class="sender_data_label_data">
+                                        <div class="sender_data_label_data_cover">
+                                            <div class="sender_data_label_cover_internal"></div>
+                                            <div class="sender_data_label_cover_label"><img class="sender_data_label_cover_label_indicator" src="static/images/waiting.svg">&nbsp;<span data-mimoto-id="progress">Encrypting data ...</span></div>
+                                        </div>
+                                        <div class="sender_data_label_data_input">
+                                            <input data-mimoto-id="data_input_password" class="data_input selected" type="password" placeholder="Enter password"/>
+                                            <textarea data-mimoto-id="data_input_text" class="data_input" placeholder="Enter text"></textarea>
+                                            <div data-mimoto-id="data_input_file" class="data_input">
+                                                <div class="data_input_file">
+                                                    <div class="data_input_file_menu">
+                                                        <div data-mimoto-id="data_input_file_button" class="button">Select file</div>
+                                                        <input data-mimoto-id="data_input_file_inputfield" class="data_input_file_inputfield" type="file" name="data_input_file"/>
+                                                    </div>
+                                                    <div data-mimoto-id="data_input_file_preview" class="data_input_file_preview">
+                                                        <div data-mimoto-id="data_input_file_preview_label" class="data_input_file_preview_label"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sender_data_menu">
+                                    <div data-mimoto-id="button_input_send" class="button disabled">Send</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-mimoto-id="component_DataOutput" class="component_DataOutput">
+                        <div data-mimoto-id="component_DataOutput_container"></div>
+                        <div data-mimoto-id="component_ClearClipboard" class="component_ClearClipboard">
+                            <div class="component_ClearClipboard_content">
+                                <div class="component_ClearClipboard_content_message"><b>STAY SAFE</b> - This is a not-so-subtle reminder to clear your clipboard after you copied sensitive data to it.</div>
+                                <div class="component_ClearClipboard_content_input">
+                                    <div data-mimoto-id="button_clear" class="button">Clear clipboard now!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-mimoto-id="component_Waiting" class="component_Waiting">
+                        <div class="component_Waiting_label">Sender device connected<br>Waiting for data!</div>
+                        <img src="static/images/waiting.svg">
+                    </div>
+
+                    <div data-mimoto-id="component_ToggleDirectionButton" class="component_ToggleDirectionButton">
+                        <div data-mimoto-id="button" class="module_ToggleButton">Share from here</div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+            <div data-mimoto-id="component_Banner" class="component_Banner show">
+                <div class="component_Banner_inner_container">
+                    <div class="component_Banner_inner">
+                        <div class="component_Banner_inner_logo"><img src="/static/images/DonateLove.png" width="60" height="60"></div>
+                        <div class="component_Banner_inner_text">This project runs on donations. <i>Pitch in to keep it free for everyone!</i></div>
+                        <div class="component_Banner_inner_menu"><a href="https://paypal.me/thesocialcode" target="_blank" class="button component_Banner_button">Donate now!</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-mimoto-id="main-information" class="main-information">
+                <div class="main-interface-information">
+                    <div id="howitworks" class="main-interface-information-section left">
+                        <h2 class="main-interface-information-section-title">What does it do?</h2>
+                        <div class="main-interface-information-section-body">
+                            <p>
+                                <span class="link">CopyPaste.me</span> helps you when you need to send a password, text snippet or file from one phone, laptop or tablet to another device. No more painstakingly typing in your password character by character, sending yourself pieces of text via email or having to look for a USB stick. As long as you have a browser, you are ready to start sharing data between devices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-interface-information-section right">
+                        <h2 class="main-interface-information-section-title">How does it work?</h2>
+                        <div class="main-interface-information-section-body">
+                            <p>The QR code above is generated specifically for you. Scan it by pointing your phone’s camera at it (most of them have a QR scanner built in) to setup the connection and start sharing! If you don’t have a camera at hand, for instance when you want to connect your laptop to another computer, simply use the <span class="highlight">'connect manually'</span> option. Or use the <span class="highlight">'invite'</span> option if you like to setup a secure connection with someone else.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <div>
+                        <div>
+                            <div class="feature_adverb">Securely</div><div class="feature_divider">-</div><div class="feature_datatype">share passwords</div>
+                        </div>
+                        <img src="/static/images/features_passwords.png" class="feature_image">
+                        <div class="feature_description">
+                            No more sharing your passwords via WhatsApp, email, text message,
+                            or – even worse – writing it down for a colleague, friend or loved
+                            one on a piece of paper.
+                        </div>
+                    </div>
+                    <div class="features_divider"></div>
+                    <div>
+                        <div class="features_datatitle">
+                            <div class="feature_adverb">Easily</div><div class="feature_divider">-</div><div class="feature_datatype">share text snippets</div>
+                        </div>
+                        <img src="/static/images/features_textsnippets.png" class="feature_image">
+                        <div class="feature_description">
+                            Share snippets of texts, suggestions for messages, a paragraph of
+                            an email or document, a piece of code, an error message, etc etc.
+                        </div>
+                    </div>
+                    <div class="features_divider"></div>
+                    <div>
+                        <div>
+                            <div class="feature_adverb">Effortlessly</div><div class="feature_divider">-</div><div class="feature_datatype">share files</div>
+                        </div>
+                        <img src="/static/images/features_files.png" class="feature_image">
+                        <div class="feature_description">
+                            Never again the desperate search for a USB stick or someone
+                            from the technical desk to get files from your laptop or phone
+                            to a computer you need it on. Also very handy for sharing
+                            files or photos with people you’ve just met, but currently
+                            don’t have (or want to have) in your contact list.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-interface-information">
+                    <div class="main-interface-information-section left">
+                        <h2 class="main-interface-information-section-title">Your data is yours and yours alone</h2>
+                        <div class="main-interface-information-section-body">
+                            <p>You should be able to share your data from one of your devices to another or share it with a friend, colleague or loved one without big technology giants following your every move. Your data is sent over a secure connection, is end-to-end encrypted and no data is stored on the server.</p>
+                        </div>
+                    </div>
+
+                    <div id="support" class="main-interface-information-section right">
+                        <h2 class="main-interface-information-section-title">How you can help to keep it free</h2>
+                        <div class="main-interface-information-section-body bottom">
+                            <p><a href="https://thesocialcodefoundation.org" target="_blank">The Social Code Foundation</a> wants to offer this privacy-friendly sharing service free to all, but to cover the operational costs it relies on donations by enthusiastic users. For privacy reasons, and because the advertisement business model is broken to the core, the project can’t be funded with ad revenue. For long term sustainability reasons the project doesn’t want to rely on investors: profit and economic growth shouldn't be at the core of every initiative.</p>
+                            <div class="supportoptions">
+                                <a href="https://paypal.me/thesocialcode" target="_blank" class="buttonSupport paypal">Make a donation</a><a href="https://www.patreon.com/thesocialcode" target="_blank" class="buttonSupport patreon">Become a patron</a>
+                            </div>
+                            <p>So if you like this service, please consider supporting the project by chipping in. Thank you very much for making this possible!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-mimoto-id="footer" class="main-interface-footer">
+            <div data-mimoto-id="footer-expanded" class="main-interface-footer-expanded">
+                <div class="footer_table">
+                    <div class="footer_table_column left">
+                        <div class="footer-logo-copypaste">CopyPaste<span class="footer-logo-me">.me</span></div>
+                        <div class="footer-logo-credits">Offered by <a href="https://thesocialcodefoundation.org" target="_blank">The Social Code</a></div>
+                    </div>
+                    <div class="footer_table_column center footer_table_center">
+                        <div class="footer_table_center_column">
+                            <div class="footer_table_center_column_cell"><a href="/#howitworks">How it works</a></div>
+                            <div class="footer_table_center_column_cell"><a href="/faq#security">Security</a></div>
+                            <div class="footer_table_center_column_cell"><a href="/faq">FAQ</a></div>
+                        </div>
+                        <div class="footer_table_center_column">
+                            <div class="footer_table_center_column_cell"><a href="/#support">Support</a></div>
+                            <div class="footer_table_center_column_cell"><a href="/faq#contact">Contact</a></div>
+                        </div>
+                    </div>
+                    <div class="footer_table_column right">
+                        <div class="footer_socialicons_title">Follow this project</div>
+                        <div class="footer_socialicons">
+                            <a href="https://www.facebook.com/frictionless.sharing/" target="_blank"><div class="footer_socialicon facebook"></div></a>
+                            <a href="https://www.linkedin.com/company/thesocialcode" target="_blank"><div class="footer_socialicon linkedin"></div></a>
+                            <a href="https://www.getrevue.co/profile/TheSocialCode" target="_blank"><div class="footer_socialicon email"></div></a>
+                            <a href="https://patreon.com/thesocialcode" target="_blank"><div class="footer_socialicon patreon"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-mimoto-id="footer-collapsed" class="main-interface-footer-collapsed show">
+                <div data-mimoto-id="footer-collapsed-background" class="main-interface-footer-collapsed-background"></div>
+                <div class="main-interface-footer-collapsed-content">Offered by <a href="https://thesocialcodefoundation.org" target="_blank">The Social Code</a> - <a href="/faq">FAQ</a> - <a href="https://paypal.me/thesocialcode" target="_blank">Donate now</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="templates" class="templates">
+        <div id="template-data" class="receiver_data">
+            <div class="receiver_data_placeholder_container">
+                <div data-mimoto-id="placeholder" class="receiver_data_placeholder"></div>
+            </div>
+            <div data-mimoto-id="content" class="receiver_data_content_container">
+                <div class="receiver_data_content">
+                    <div class="receiver_data_label">
+                        <div class="receiver_data_label_data">
+                            <div class="sender_data_label_data_cover">
+                                <div class="sender_data_label_cover_internal"></div>
+                                <div class="sender_data_label_cover_label"><span data-mimoto-id="indicator" class="component_SharedData_cover_indicator"><img class="sender_data_label_cover_label_indicator" src="static/images/waiting.svg">&nbsp;</span><span data-mimoto-id="coverlabel">Receiving data ...</span></div>
+                            </div>
+                            <div data-mimoto-id="receiver_data_label_data" class="component_SharedData_data_label"></div>
+                        </div>
+                    </div>
+                    <div class="receiver_data_menu">
+                        <div data-mimoto-id="receiver_data_button" class="button">Copy&nbsp;to&nbsp;clipboard</div>
+                    </div>
+                </div>
+            </div>
+            <div class="receiver_data_options">
+                <div data-mimoto-id="optionsmenu" class="component_SharedData_optionsmenu">
+                    Clears in <span data-mimoto-id="receiver_data_lifetime" class="component_SharedData_expires">2 mins 0 secs</span> -
+                    <a data-mimoto-id="receiver_data_option_extend" class="receiver_data_option">extend</a> -
+                    <a data-mimoto-id="receiver_data_option_clearnow" class="receiver_data_option">clear now</a> -
+                    Please <a href="#support" target="_blank" class="component_SharedData_donate">donate</a> <span class="module_SharedData_donate_heart">♥</span>
+                </div>
+                <div data-mimoto-id="donate" class="component_SharedData_donate">
+                    Help keeping this project free for all. Please <a href="#support" target="_blank" class="component_SharedData_donate">donate</a> <span class="module_SharedData_donate_heart">♥</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const sessionID = 'dev-' + Math.random().toString(36).substr(2, 9);
+        window.Mimoto = {
+            config: { socketio: { server: { url: window.location.origin } } },
+            user: { guid: sessionID, step: 'init' }
+        };
+        document.CopyPaste = {
+            config: { socketio: { port: 3000 } },
+            user: { guid: sessionID, step: 'init' },
+            autoRun: true
+        };
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
