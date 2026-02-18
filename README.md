@@ -26,3 +26,25 @@ The original application relied on a stack that included PHP and MongoDB. As a C
    ```bash
    git clone [https://github.com/nizam-ahamad/copypaste.git](https://github.com/nizam-ahamad/copypaste.git)
    ```
+2. **Install dependecy:**
+
+   ```bash
+   [npm install]
+
+   ```
+
+3. **Setup your config file:**
+   Make a duplicate of the existing CopyPaste.config.json-dist file and name the new file CopyPaste.config.json.
+
+## ▶️ How to Run the Application
+
+Since this version is designed to run standalone without MongoDB or SSL (HTTPS) for local testing, use the following command to start the server:
+
+    ```bash
+    [node app/server/CopyPaste.server.js https false mongoauthenticate=false]
+
+🙌 Credits & Licensing
+
+    1. Original Project & UI/UX: Created and offered by The Social Code Foundation.
+
+    2.All front-end design, original concepts, and core frontend logic belong to the original authors. This repository serves as a backend architectural study and Node.js refactoring showcase.
