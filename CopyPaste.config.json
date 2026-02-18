@@ -1,0 +1,17 @@
+{
+    "mongo": false,
+    "https": false,
+    "mongoauthenticate": false,
+    "socketio": {
+        "client": { "port": 443 },
+        "server": { 
+            "host": "copypaste-app.onrender.com", 
+            "port": 443 
+        },
+        "cors": { "domain": "*" } 
+    },
+    "ssl": { "key": "", "certificate": "" },
+    "csp": { "nonce-js": "", "nonce-css": "" },
+    "mongodb": { "host": "localhost", "port": 27017, "dbname": "cp" },
+    "logtofile": { "file": "server.log" }
+}
