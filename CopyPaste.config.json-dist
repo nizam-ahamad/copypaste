@@ -1,7 +1,7 @@
 {
     "socketio": {
         "client": {
-            "port": ""
+            "port": null
         },
         "server": {
             "host": "0.0.0.0",

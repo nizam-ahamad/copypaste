@@ -165,7 +165,7 @@
         document.CopyPaste = {
             config: {
                 socketio: {
-                    port: '<?php echo $config['socketio']['client']['port']; ?>'
+                    port: <?php echo json_encode($config['socketio']['client']['port']); ?>
                 }
             },
             autoRun: <?php echo ($bAutoRun) ? 'true' : 'false'; ?>
