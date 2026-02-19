@@ -20,7 +20,7 @@ module.exports = {
         path: path.resolve(__dirname, 'web/static/dist'),
         filename: 'CopyPaste.[chunkhash].js'
     },
-    watch: true,
+    watch: process.env.NODE_ENV === 'development' ? true : false,
     mode: "production",
 
 
