@@ -123,7 +123,7 @@ module.exports = {
 
     this._socketIO = Module_SocketIO(this._server, {
       cors: {
-        origin: this._configFile.socketio.cors,
+        origin: this._configFile.socketio.cors.domain || "*",
         methods: ["GET", "POST"],
       },
     });

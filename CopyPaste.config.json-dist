@@ -1,14 +1,14 @@
 {
     "socketio": {
         "client": {
-            "port": 3000
+            "port": ""
         },
         "server": {
-            "host": "localhost",
+            "host": "0.0.0.0",
             "port": 3000
         },
         "cors": {
-            "domain": "https://yourdomain.com"
+            "domain": "*"
         }
     },
     "ssl": {
