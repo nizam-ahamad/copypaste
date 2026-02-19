@@ -7,7 +7,7 @@
 "use strict";
 
 // import
-const QRCodeGenerator = require("qrcode-generator");
+const QRCode = require("qrcode");
 const MenuConnectionType = require("./../MenuConnectionType/MenuConnectionType");
 const ConnectionTypes = require("./ConnectionTypes");
 
@@ -580,12 +580,25 @@ module.exports.prototype = {
    * @private
    */
   _showQR: function () {
-    // 1. setup
-    var typeNumber = 4;
-    var errorCorrectionLevel = "L";
-    var qr = QRCodeGenerator(typeNumber, errorCorrectionLevel);
-    qr.addData(this._sTokenURL);
-    qr.make();
-    this._elConnectionTypeScan_QRContainer.innerHTML = qr.createImgTag(5);
+    // 1. generate QR code as data URL
+    QRCode.toDataURL(this._sTokenURL, {
+      errorCorrectionLevel: 'L',
+      type: 'image/png',
+      quality: 0.92,
+      margin: 1,
+      width: 300,
+      color: {
+        dark: '#000000',
+        light: '#ffffff'
+      }
+    })
+    .then(function(url) {
+      // 2. create and insert image element
+      this._elConnectionTypeScan_QRContainer.innerHTML = '<img src="' + url + '" />';
+    }.bind(this))
+    .catch(function(err) {
+      // 3. log error
+      console.error('Error generating QR code:', err);
+    });
   },
 };
