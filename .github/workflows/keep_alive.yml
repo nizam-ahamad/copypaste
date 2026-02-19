@@ -1,8 +1,8 @@
 name: Keep Render Awake
 on:
   schedule:
-    - cron: "*/10 * * * *" # This triggers every 10 minutes
-  workflow_dispatch: # This allows you to run it manually to test
+    - cron: "*/5 * * * *" # Changed from 10 to 5 minutes
+  workflow_dispatch: # Keeps the manual "Run workflow" button active
 
 jobs:
   ping:
