@@ -11,7 +11,10 @@
 
     // 4. load (ensures use of latest JS build)
     $manifest = json_decode(file_get_contents(dirname(__FILE__).'/static/dist/manifest.json'), true);
-    $config = json_decode(file_get_contents(dirname(dirname(__FILE__)).'/CopyPaste.config.json'), true);
+    $configFilePath = file_exists(dirname(dirname(__FILE__)).'/CopyPaste.config.json') 
+        ? dirname(dirname(__FILE__)).'/CopyPaste.config.json' 
+        : dirname(dirname(__FILE__)).'/CopyPaste.config.json-dist';
+    $config = json_decode(file_get_contents($configFilePath), true);
 
     // 5. init
     $bAutoRun = true;
