@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CopyPaste.me - Frictionless sharing between devices</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Frictionless sharing between devices with end-to-end encryption. Share passwords, text, and files securely without storing in the cloud.">
+    <meta name="theme-color" content="#63a9e1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="CopyPaste">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" href="/android-chrome-192x192.png">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pwa-styles.css">
 </head>
 <body>
+    <!-- PWA Offline Indicator -->
+    <div class="pwa-offline-indicator">You are offline. Some features may be limited.</div>
+    
     <div data-mimoto-id="interface" class="main-interface">
         <div data-mimoto-id="interface-content">
             <div class="main-interface-container">
@@ -370,16 +392,23 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const sessionID = 'dev-' + Math.random().toString(36).substr(2, 9);
+        // Socket.io configuration - use same origin for connection
         window.Mimoto = {
             config: { socketio: { server: { url: window.location.origin } } },
             user: { guid: sessionID, step: 'init' }
         };
         document.CopyPaste = {
-            config: { socketio: { port: null } },
+            config: { 
+                socketio: { 
+                    port: window.location.port || (window.location.protocol === 'https:' ? 443 : 80)
+                } 
+            },
             user: { guid: sessionID, step: 'init' },
             autoRun: true
         };
     </script>
+    <!-- PWA Manager - must load before app.js -->
+    <script src="pwa-manager.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
