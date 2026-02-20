@@ -96,6 +96,16 @@ module.exports = {
       const path = require("path");
       const publicPath = path.join(__dirname, "../../web");
 
+      this._app.use((req, res, next) => {
+        const host = (req.headers.host || "").toLowerCase();
+        const oldHost = "copypaste-app.onrender.com";
+        const newHost = "copypaste.onrender.com";
+        if (host === oldHost) {
+          return res.redirect(301, `https://${newHost}${req.originalUrl}`);
+        }
+        next();
+      });
+
       this._app.use(Module_Express.static(publicPath));
 
       this._app.get("/", (req, res) => {
