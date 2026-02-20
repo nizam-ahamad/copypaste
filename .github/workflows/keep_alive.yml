@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Render URL
-        run: curl -s https://copypaste.onrender.com > /dev/null
+        run: curl -s https://copypaste-app.onrender.com > /dev/null
